@@ -1,3 +1,4 @@
+import Navbar from '@/components/navbar';
 import ThemeProvider from '@/contexts/theme-provider';
 import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
@@ -19,7 +20,10 @@ export default function RootLayout({
     return (
         <html lang='en' className={cn(`min-h-screen ${inter.className}`)}>
             <body className={inter.className}>
-                <ThemeProvider>{children}</ThemeProvider>
+                <ThemeProvider>
+                    <Navbar />
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );
