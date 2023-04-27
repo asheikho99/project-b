@@ -1,3 +1,4 @@
+import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
 import NextAuthSessionProvider from '@/contexts/next-auth-session-provider';
 import ThemeProvider from '@/contexts/theme-provider';
@@ -25,9 +26,8 @@ export default function RootLayout({
                     <ThemeProvider>
                         {/* @ts-expect-error Server Component */}
                         <Navbar />
-                        <div className='container p-4'>
-                        {children}
-                        </div>
+                        <div className='container p-4'>{children}</div>
+                        <Footer />
                     </ThemeProvider>
                 </NextAuthSessionProvider>
             </body>
