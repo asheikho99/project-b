@@ -15,7 +15,7 @@ const ThemeButton = () => {
 
     return (
         <Button
-            variant='ghost'
+            variant='outline'
             aria-label='Toggle Dark Mode'
             type='button'
             onClick={() => {
