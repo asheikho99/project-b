@@ -23,6 +23,7 @@ export default function RootLayout({
             <body className={inter.className}>
                 <NextAuthSessionProvider>
                     <ThemeProvider>
+                        {/* @ts-expect-error Server Component */}
                         <Navbar />
                         <div className='container p-4'>
                         {children}
