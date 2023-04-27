@@ -24,7 +24,9 @@ export default function RootLayout({
                 <NextAuthSessionProvider>
                     <ThemeProvider>
                         <Navbar />
+                        <div className='container p-4'>
                         {children}
+                        </div>
                     </ThemeProvider>
                 </NextAuthSessionProvider>
             </body>
