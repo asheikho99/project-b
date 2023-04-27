@@ -1,3 +1,4 @@
+import { cn } from '@/libs/utils'
 import '@/styles/globals.css'
 import { Inter } from 'next/font/google'
 
@@ -14,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn(`min-h-screen ${inter.className}`)}>
       <body className={inter.className}>{children}</body>
     </html>
   )
