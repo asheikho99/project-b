@@ -1,4 +1,5 @@
 import Navbar from '@/components/navbar';
+import NextAuthSessionProvider from '@/contexts/next-auth-session-provider';
 import ThemeProvider from '@/contexts/theme-provider';
 import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
@@ -20,10 +21,12 @@ export default function RootLayout({
     return (
         <html lang='en' className={cn(`min-h-screen ${inter.className}`)}>
             <body className={inter.className}>
-                <ThemeProvider>
-                    <Navbar />
-                    {children}
-                </ThemeProvider>
+                <NextAuthSessionProvider>
+                    <ThemeProvider>
+                        <Navbar />
+                        {children}
+                    </ThemeProvider>
+                </NextAuthSessionProvider>
             </body>
         </html>
     );
