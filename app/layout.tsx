@@ -20,8 +20,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang='en' className={cn(`min-h-screen ${inter.className}`)}>
-            <body className={inter.className}>
+        <html lang='en' suppressHydrationWarning>
+            <body className={cn(`min-h-screen ${inter.className}`)}>
                 <NextAuthSessionProvider>
                     <ThemeProvider>
                         {/* @ts-expect-error Server Component */}
