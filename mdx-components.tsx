@@ -6,104 +6,36 @@ import { Callout } from '@/components/callout';
 import { MdxCard } from '@/components/mdx-card';
 import { MDXComponents } from 'mdx/types';
 
+import { TypographyH1 } from './components/typography/typography-h1';
+import { TypographyH2 } from './components/typography/typography-h2';
+import { TypographyH3 } from './components/typography/typography-h3';
+import { TypographyH4 } from './components/typography/typography-h4';
+import { TypographyH5 } from './components/typography/typography-h5';
+import { TypographyH6 } from './components/typography/typography-h6';
+import { TypographyA } from './components/typography/typography-a';
+import { TypographyP } from './components/typography/typography-p';
+import { TypographyUList } from './components/typography/typography-ul';
+import { TypographyOList } from './components/typography/typography-ol';
+import { TypographyList } from './components/typography/typography-list';
+import { TypographyBlockquote } from './components/typography/typography-block-quote';
+import { TypographyPre } from './components/typography/typography-pre';
+
 // This file is required to use MDX in `app` directory.
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
         // Allows customizing built-in components, e.g. to add styling.
-        // h1: ({ children }) => <h1 style={{ fontSize: "100px" }}>{children}</h1>,
-        h1: ({ className, ...props }) => (
-            <h1
-                className={cn(
-                    'mt-2 scroll-m-20 text-4xl font-bold tracking-tight',
-                    className
-                )}
-                {...props}
-            />
-        ),
-        h2: ({ className, ...props }) => (
-            <h2
-                className={cn(
-                    'mt-10 scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0',
-                    className
-                )}
-                {...props}
-            />
-        ),
-        h3: ({ className, ...props }) => (
-            <h3
-                className={cn(
-                    'mt-8 scroll-m-20 text-2xl font-semibold tracking-tight',
-                    className
-                )}
-                {...props}
-            />
-        ),
-        h4: ({ className, ...props }) => (
-            <h4
-                className={cn(
-                    'mt-8 scroll-m-20 text-xl font-semibold tracking-tight',
-                    className
-                )}
-                {...props}
-            />
-        ),
-        h5: ({ className, ...props }) => (
-            <h5
-                className={cn(
-                    'mt-8 scroll-m-20 text-lg font-semibold tracking-tight',
-                    className
-                )}
-                {...props}
-            />
-        ),
-        h6: ({ className, ...props }) => (
-            <h6
-                className={cn(
-                    'mt-8 scroll-m-20 text-base font-semibold tracking-tight',
-                    className
-                )}
-                {...props}
-            />
-        ),
-        a: ({ className, ...props }) => (
-            <a
-                className={cn(
-                    'font-medium underline underline-offset-4',
-                    className
-                )}
-                {...props}
-            />
-        ),
-        p: ({ className, ...props }) => (
-            <p
-                className={cn(
-                    'leading-7 [&:not(:first-child)]:mt-6',
-                    className
-                )}
-                {...props}
-            />
-        ),
-        ul: ({ className, ...props }) => (
-            <ul className={cn('my-6 ml-6 list-disc', className)} {...props} />
-        ),
-        ol: ({ className, ...props }) => (
-            <ol
-                className={cn('my-6 ml-6 list-decimal', className)}
-                {...props}
-            />
-        ),
-        li: ({ className, ...props }) => (
-            <li className={cn('mt-2', className)} {...props} />
-        ),
-        blockquote: ({ className, ...props }) => (
-            <blockquote
-                className={cn(
-                    'mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground',
-                    className
-                )}
-                {...props}
-            />
-        ),
+        h1: TypographyH1,
+        h2: TypographyH2,
+        h3: TypographyH3,
+        h4: TypographyH4,
+        h5: TypographyH5,
+        h6: TypographyH6,
+        a: TypographyA,
+        p: TypographyP,
+        ul: TypographyUList,
+        ol: TypographyOList,
+        li: TypographyList,
+        blockquote: TypographyBlockquote,
         img: ({
             className,
             alt,
@@ -152,15 +84,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 {...props}
             />
         ),
-        pre: ({ className, ...props }) => (
-            <pre
-                className={cn(
-                    'mb-4 mt-6 overflow-x-auto rounded-lg border bg-black py-4',
-                    className
-                )}
-                {...props}
-            />
-        ),
+        pre: TypographyPre,
         code: ({ className, ...props }) => (
             <code
                 className={cn(
