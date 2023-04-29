@@ -20,6 +20,12 @@ const Footer = () => {
                         priority
                     />
                 </Link>
+                <Link
+                    className='flex flex-row space-x-2 text-muted-foreground'
+                    href={'/about'}
+                    target='_self'>
+                    About this project
+                </Link>
             </div>
         </div>
     );
