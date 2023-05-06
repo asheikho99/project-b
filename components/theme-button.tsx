@@ -1,29 +1,37 @@
-'use client';
+'use client'
 
-import React, { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
-import { Button } from '@/components/ui/button';
-import { Moon, Sun } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
+import { Moon, Sun } from "lucide-react";
 
 const ThemeButton = () => {
-    const { theme, setTheme } = useTheme();
-    const [icon, setIcon] = useState(<Sun />);
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [icon, setIcon] = useState(<></>);
 
-    useEffect(() => {
-        setIcon(theme === 'dark' ? <Sun /> : <Moon />);
-    }, [theme]);
+  useEffect(() => {
+    setMounted(true);
+    setIcon(theme === "light" ? <Moon /> : <Sun />);
+  }, [systemTheme, theme]);
 
-    return (
-        <Button
-            variant='outline'
-            aria-label='Toggle Dark Mode'
-            type='button'
-            onClick={() => {
-                setTheme(theme === 'dark' ? 'light' : 'dark');
-            }}>
-            {icon}
-        </Button>
-    );
+  if (!mounted) return null;
+
+  const toggleTheme = () => {
+    const currentTheme = theme === "system" ? systemTheme : theme;
+    setTheme(currentTheme === "dark" ? "light" : "dark");
+  };
+
+  return (
+    <Button
+      variant="outline"
+      aria-label="Toggle Dark Mode"
+      type="button"
+      onClick={toggleTheme}
+    >
+      {icon}
+    </Button>
+  );
 };
 
 export default ThemeButton;
