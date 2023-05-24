@@ -23,7 +23,7 @@ const UserMenu = async () => {
                 {/* @ts-expect-error Server Component */}
                 <UserAvatar />
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent align='end'>
                 <DropdownMenuLabel>{session?.user?.name}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
