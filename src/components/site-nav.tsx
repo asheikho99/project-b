@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import ThemeSwitcher from "./theme-switcher";
+import User from "./user";
 
 const SiteNav = () => {
   return (
@@ -9,7 +10,10 @@ const SiteNav = () => {
         <Link href={"/"} className="font-bold">
           Project-B
         </Link>
-        <ThemeSwitcher />
+        <div className="flex flex-row items-center justify-center space-x-4">
+          <ThemeSwitcher />
+          <User />
+        </div>
       </div>
     </nav>
   );
