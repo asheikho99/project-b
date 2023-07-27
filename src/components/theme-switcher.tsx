@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
+import { Skeleton } from "./ui/skeleton";
 
 const ToggleTheme = () => {
   const { theme, setTheme } = useTheme();
@@ -32,7 +33,7 @@ const ThemeSwitcher = () => {
     setMounted(true);
   }, []);
 
-  return !mounted ? <Button variant={"ghost"}></Button> : <ToggleTheme />;
+  return !mounted ? <Skeleton /> : <ToggleTheme />;
 };
 
 export default ThemeSwitcher;
