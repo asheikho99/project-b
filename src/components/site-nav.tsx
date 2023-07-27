@@ -5,7 +5,7 @@ import ThemeSwitcher from "./theme-switcher";
 const SiteNav = () => {
   return (
     <nav className="border-b">
-      <div className="container mx-auto flex flex-row items-center justify-between py-8">
+      <div className="container mx-auto flex max-w-7xl flex-row items-center justify-between py-8">
         <Link href={"/"} className="font-bold">
           Project-B
         </Link>

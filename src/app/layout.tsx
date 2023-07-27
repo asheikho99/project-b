@@ -20,9 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NextThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>
+        <NextThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={true}
+        >
           <SiteNav />
-          {children}
+          <main className="container mx-auto min-h-screen max-w-7xl py-8">
+            {children}
+          </main>
           <SiteFooter />
         </NextThemeProvider>
       </body>
