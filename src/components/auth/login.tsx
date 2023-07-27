@@ -10,6 +10,7 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   return (
     <Button
+    variant={'secondary'}
       onClick={() => {
         setIsLoading(true);
         signIn("github", { callbackUrl: "/" });

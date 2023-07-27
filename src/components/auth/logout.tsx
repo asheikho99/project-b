@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import { signOut } from "next-auth/react";
 
-import { Button } from "../ui/button";
 import { Loader2 } from "lucide-react";
 
 const Logout = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   return (
-    <Button
+    <button
+      className="h-full w-full text-left"
       onClick={() => {
         signOut();
         setIsLoading(true);
@@ -17,7 +17,7 @@ const Logout = () => {
       disabled={isLoading}
     >
       <span>{isLoading ? <Loader2 className="animate-spin" /> : "Logout"}</span>
-    </Button>
+    </button>
   );
 };
 
