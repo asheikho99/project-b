@@ -1,9 +1,7 @@
-import SiteNav from "@/components/site-nav";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NextThemeProvider from "@/components/next-theme-provider";
-import SiteFooter from "@/components/site-footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,18 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <NextThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={true}
         >
-          <SiteNav />
-          <main className="container mx-auto min-h-screen max-w-7xl py-8">
-            {children}
-          </main>
-          <SiteFooter />
+          {children}
         </NextThemeProvider>
       </body>
     </html>
