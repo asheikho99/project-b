@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NextThemeProvider from "@/components/next-theme-provider";
+import SiteFooter from "@/components/site-footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <NextThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>
           <SiteNav />
           {children}
+          <SiteFooter />
         </NextThemeProvider>
       </body>
     </html>
