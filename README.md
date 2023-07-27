@@ -2,27 +2,11 @@
 This is a [Next.js](https://nextjs.org/) app direcotry project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## About the Project
-The objective of this project is to port [Court Booking System](https://bitbucket.org/rsquires31896/cis2232_20192020_project_vanilla/src/master/) to a modern web framework such as Next.js 13 and React 18 and redesign user interface with Tailwind. 
+The objective of this project is to port [Court Booking System](https://bitbucket.org/rsquires31896/cis2232_20192020_project_vanilla/src/master/) to a modern web framework such as Next.js 13 and React 18 and redesign user interface with Tailwind.
 
-This is originally a Spring MVC application which was written in Java, had become obsolete due to deprecated dependencies. The system, which was originally developed by me and my team as our final project for graduation, [Court Booking System](https://bitbucket.org/rsquires31896/cis2232_20192020_project_vanilla/src/master/) is a web application designed for a fitness court center that offers courts available for booking. It enables members to effortlessly schedule and reserve available courts in advance, simplifying the process of planning and organizing their activities.
+This is originally a Spring MVC application which was written in Java, had become obsolete due to deprecated dependencies.
 
-## Getting Started
-
-**1. Clone the repository and install dependencies**
-
-```bash
-git clone https://github.com/asheikho99/project-b.git
-cd project-b
-npm install
-```
-
-**2. Run the development server:**
-
-```bash
-npm run dev
-```
-
-**3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.**
+The system, which was originally developed by me and my team as our final project for graduation, [Court Booking System](https://bitbucket.org/rsquires31896/cis2232_20192020_project_vanilla/src/master/) is a web application designed for a fitness court center that offers courts available for booking. It enables members to effortlessly schedule and reserve available courts in advance, simplifying the process of planning and organizing their activities.
 
 ## Roadmap
 
@@ -47,6 +31,24 @@ npm run dev
     - [x] User auth using [NextAuth](https://next-auth.js.org/)
     - [x] Theme Switching
     - [x] Markdown to JSX content parser
+
+## Getting Started
+
+**1. Clone the repository and install dependencies**
+
+```bash
+git clone https://github.com/asheikho99/project-b.git
+cd project-b
+npm install
+```
+
+**2. Run the development server:**
+
+```bash
+npm run dev
+```
+
+**3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.**
 
 ## Learn More
 
