@@ -5,6 +5,7 @@ import UserNavMenu from "./user-nav-menu";
 import { getServerSession } from "next-auth";
 import { buttonVariants } from "./ui/button";
 import { cn } from "@/lib/utils";
+import NavAuthButton from "./auth/nav-auth-button";
 
 const SiteNav = async () => {
   const session = await getServerSession();
@@ -20,9 +21,7 @@ const SiteNav = async () => {
           {session ? (
             <UserNavMenu />
           ) : (
-            <Link href="/" className={cn(buttonVariants({ size: "default", variant: 'secondary' }))}>
-              Login
-            </Link>
+            <NavAuthButton />
           )}
         </div>
       </div>
