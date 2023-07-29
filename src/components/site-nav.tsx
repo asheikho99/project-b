@@ -3,9 +3,10 @@ import Link from "next/link";
 import ThemeSwitcher from "./theme-switcher";
 import UserNavMenu from "./user-nav-menu";
 import { getServerSession } from "next-auth";
+import { buttonVariants } from "./ui/button";
+import { cn } from "@/lib/utils";
 
 const SiteNav = async () => {
-
   const session = await getServerSession();
 
   return (
@@ -16,7 +17,13 @@ const SiteNav = async () => {
         </Link>
         <div className="flex flex-row items-center justify-center space-x-4">
           <ThemeSwitcher />
-          {session ? <UserNavMenu /> : <></>}
+          {session ? (
+            <UserNavMenu />
+          ) : (
+            <Link href="/" className={cn(buttonVariants({ size: "default", variant: 'secondary' }))}>
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </nav>
