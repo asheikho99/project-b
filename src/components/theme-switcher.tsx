@@ -33,7 +33,13 @@ const ThemeSwitcher = () => {
     setMounted(true);
   }, []);
 
-  return !mounted ? <Skeleton /> : <ToggleTheme />;
+  return !mounted ? (
+    <Button variant={"ghost"} disabled>
+      <Skeleton />
+    </Button>
+  ) : (
+    <ToggleTheme />
+  );
 };
 
 export default ThemeSwitcher;
