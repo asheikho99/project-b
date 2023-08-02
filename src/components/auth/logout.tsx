@@ -11,7 +11,7 @@ const Logout = () => {
     <button
       className="h-full w-full text-left"
       onClick={() => {
-        signOut();
+        signOut({ callbackUrl: `${window.location.origin}/login` });
         setIsLoading(true);
       }}
       disabled={isLoading}
