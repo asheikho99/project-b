@@ -1,5 +1,5 @@
 import "@/app/globals.css";
-import AboutFooter from "@/components/about-footer";
+import SiteFooter from "@/components/site-footer";
 import SiteNav from "@/components/site-nav";
 import type { Metadata } from "next";
 
@@ -19,7 +19,7 @@ export default function AboutLayout({
       <main className="container mx-auto flex min-h-screen max-w-7xl flex-col py-8">
         {children}
       </main>
-      <AboutFooter />
+      <SiteFooter />
     </>
   );
 }
