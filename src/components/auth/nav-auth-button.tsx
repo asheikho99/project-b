@@ -17,7 +17,7 @@ const NavAuthButton = () => {
       variant={"default"}
       disabled={isLoading}
     >
-      {isLoading ? <Loader2 className="animate-spin" /> : `Login`}
+      <span>Get Started</span>
     </Button>
   );
 };

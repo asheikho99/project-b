@@ -18,14 +18,11 @@ const Login = () => {
       }}
       disabled={isLoading}
     >
-      {isLoading ? (
-        <Loader2 className="animate-spin" />
-      ) : (
-        <p className="flex flex-row items-center justify-center space-x-2">
-          <span>Continue with </span>
-          <Github />
-        </p>
-      )}
+      <div className="flex flex-row items-center justify-center space-x-2">
+        {isLoading ? <Loader2 className="animate-spin" /> : <></>}
+        <span>Continue with </span>
+        <Github />
+      </div>
     </Button>
   );
 };
