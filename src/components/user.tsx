@@ -7,12 +7,14 @@ const User = async () => {
   const session = await getServerSession();
   const user = session?.user;
 
-  return (<Avatar>
-    <AvatarImage src={user?.image as string} />
-    <AvatarFallback>
-      <Skeleton />
-    </AvatarFallback>
-  </Avatar>);
+  return (
+    <Avatar className="h-8 w-8">
+      <AvatarImage src={user?.image as string} />
+      <AvatarFallback>
+        <Skeleton />
+      </AvatarFallback>
+    </Avatar>
+  );
 };
 
 export default User;

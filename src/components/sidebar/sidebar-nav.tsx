@@ -1,10 +1,10 @@
 import React from "react";
-import Categories from "./categories";
+import SidebarItems from "./sidebar-items";
 
 const SidebarNav = () => {
   return (
-    <aside className="sticky top-0 col-span-2 hidden h-screen min-h-0 flex-col border-r-[1px] border-r-secondary pr-2 md:flex">
-      <Categories />
+    <aside className="hidden w-[200px] flex-col md:flex h-screen sticky top-0 min-h-0 ">
+      <SidebarItems />
     </aside>
   );
 };

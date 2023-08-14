@@ -7,7 +7,7 @@ interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
 
 const SiteFooter = ({ className }: SiteFooterProps) => (
   <footer className={`border-t ${className}`}>
-    <div className="container mx-auto flex max-w-7xl flex-row items-center justify-center space-x-4 py-8">
+    <div className="container flex flex-col items-center justify-center gap-4 py-10 md:h-24 md:flex-row md:py-0">
       <Link href="/about" className="text-primary/60 hover:text-primary">
         About this project
       </Link>

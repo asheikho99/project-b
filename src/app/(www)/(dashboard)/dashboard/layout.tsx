@@ -1,6 +1,6 @@
 import "@/app/globals.css";
 import type { Metadata } from "next";
-import SiteNav from "@/components/site-nav";
+import SiteNav from "@/components/nav/site-nav";
 import SiteFooter from "@/components/site-footer";
 import SidebarNav from "@/components/sidebar/sidebar-nav";
 
@@ -17,10 +17,10 @@ export default function RootLayout({
   return (
     <>
       <SiteNav />
-      <main className="container mx-auto flex min-h-screen max-w-7xl flex-col py-8">
-        <div className="grid flex-1 grid-cols-12 grid-rows-1">
-          <SidebarNav />
-          <div className="col-span-full md:col-span-10 md:pl-4">{children}</div>
+      <main className="container grid flex-1 gap-12 py-6 md:grid-cols-[200px_1fr]">
+        <SidebarNav />
+        <div className="flex w-full flex-1 flex-col overflow-hidden">
+          <div className="grid items-start gap-8">{children}</div>
         </div>
       </main>
       <SiteFooter />
