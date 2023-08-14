@@ -4,7 +4,7 @@ export type Category = {
   disabled: boolean;
 };
 
-const categories: Category[] = [
+const sidebarCategories: Category[] = [
   {
     title: "Overview",
     href: "/dashboard/overview",
@@ -18,5 +18,5 @@ const categories: Category[] = [
 ];
 
 export const getCatgories = (): Category[] => {
-  return categories;
+  return sidebarCategories;
 };

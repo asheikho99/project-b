@@ -1,6 +1,6 @@
 import "@/app/globals.css";
 import SiteFooter from "@/components/site-footer";
-import SiteNav from "@/components/site-nav";
+import SiteNav from "@/components/nav/site-nav";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function AboutLayout({
   return (
     <>
       <SiteNav />
-      <main className="container mx-auto flex min-h-screen max-w-7xl flex-col py-8">
+      <main className="container mx-auto flex min-h-screen flex-col py-6">
         {children}
       </main>
       <SiteFooter />

@@ -1,12 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
-import { buttonVariants } from "@/components/ui/button";
-import { type Category as CategoryType } from "@/lib/categories";
-import Link from "next/link";
-import { Skeleton } from "../ui/skeleton";
 
-const Category = ({ category }: { category: CategoryType }) => {
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Skeleton } from "../ui/skeleton";
+import { type Category } from "@/lib/sidebar-categories";
+
+const SidebarItem = ({ category }: { category: Category }) => {
   const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
@@ -18,9 +18,8 @@ const Category = ({ category }: { category: CategoryType }) => {
   return mounted ? (
     <Link
       href={category.href}
-      className={`${buttonVariants({
-        variant: pathname == category.title.toLowerCase() ? "default" : "ghost",
-      })}`}
+      className={`rounded-md px-3 py-2 text-sm font-medium hover:bg-secondary
+       ${pathname == category.title.toLowerCase() ? "bg-secondary" : ""}`}
     >
       {category.title}
     </Link>
@@ -29,4 +28,4 @@ const Category = ({ category }: { category: CategoryType }) => {
   );
 };
 
-export default Category;
+export default SidebarItem;

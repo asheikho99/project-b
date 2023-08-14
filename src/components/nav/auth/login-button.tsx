@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import { signIn } from "next-auth/react";
 
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { Github, Loader2 } from "lucide-react";
 
-const Login = () => {
+const LoginButton = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   return (
     <Button
@@ -19,12 +19,11 @@ const Login = () => {
       disabled={isLoading}
     >
       <div className="flex flex-row items-center justify-center space-x-2">
-        {isLoading ? <Loader2 className="animate-spin" /> : <></>}
-        <span>Continue with </span>
-        <Github />
+        {isLoading ? <Loader2 className="animate-spin" /> : <Github />}
+        <span>Continue with GitHub</span>
       </div>
     </Button>
   );
 };
 
-export default Login;
+export default LoginButton;
