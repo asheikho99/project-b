@@ -8,13 +8,13 @@ const LogoutButton = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   return (
     <button
-      className="h-full w-full text-left flex flex-row space-x-2"
+      className="relative flex flex-row justify-start cursor-default select-none items-center rounded-sm text-sm outline-none transition-colors focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 w-full"
       onClick={() => {
         signOut({ callbackUrl: `${window.location.origin}/login` });
         setIsLoading(true);
       }}
       disabled={isLoading}>
-      {isLoading ? <Loader2 className="animate-spin" /> : <ArrowLeftToLine />}
+      {isLoading ? <Loader2 className="animate-spin h-4" /> : <ArrowLeftToLine className="h-4"/>}
       <span>Logout</span>
     </button>
   );
